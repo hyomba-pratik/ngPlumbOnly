@@ -1,0 +1,34 @@
+<div class="container">
+  <br>
+  <h3>WorkFlow Builder</h3>
+  <div class="row">
+    <div class="col-4">
+      <div>
+        <label for="">Workflow Name</label> {{workFlowNames}}
+        <input type="text" class="form-control" name="workFlowName" [ngModel]="workFlowName" (ngModelChange)="workFlowNameChange($event)">
+      </div>
+    </div>
+    <div class="col-4">
+      <label for="">Status</label>
+      <br>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" value="true" name="status" [ngModel]="workFlowStatus" (ngModelChange)="workFlowStatusChange($event)">
+        <label class="form-check-label">
+          Enabled
+        </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" value="false" name="status" [ngModel]="status" (ngModelChange)="workFlowStatusChange($event)">
+        <label class="form-check-label">
+          Disabled
+        </label>
+      </div>
+
+    </div>
+  </div>
+  <br>
+  <div class="workflow-builder row">
+    <app-controls class="controls col"></app-controls>
+    <app-canvas class="canvas col ph0"></app-canvas>
+  </div>
+</div>

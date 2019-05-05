@@ -1,0 +1,26 @@
+.widget-wrapper {
+
+  .widget {
+    border: 1px solid rgba(255, 205, 150, 1);
+    position: absolute;
+    color: rgba(250, 14, 12, 1);
+    text-align: center;
+    position: absolute;
+    z-index: 5;
+  }
+}
+
+.panzoom{
+  height: 100%;
+  // position: absolute;
+  // width: 200%;
+  // height: 200%;
+}
+
+.super-container{
+  height: 200%;
+  width: 200%;
+  position: absolute;
+  top:-100%;
+  left: -100%;
+}

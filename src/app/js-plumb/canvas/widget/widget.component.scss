@@ -1,0 +1,13 @@
+.card {
+  cursor: move;
+
+  * {
+    font-size: 12px;
+  }
+
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: 0.5rem;
+  }
+}

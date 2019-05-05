@@ -1,0 +1,25 @@
+.workflow-builder {
+  display: flex;
+  flex-direction: row;
+}
+
+app-canvas.canvas {
+  background: linear-gradient(
+      to right,
+      rgba(20, 20, 20, 0.3) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(20, 20, 20, 0.3), transparent 1px);
+  background-size: 10px 10px;
+  height: 700px;
+  border: 2px solid rgba(20, 20, 20, 0.3);
+  flex: 80%;
+  cursor: grab;
+  overflow: hidden;
+  position: relative;
+}
+
+app-controls.controls {
+  flex: 20%;
+  padding: 0 15px;
+}

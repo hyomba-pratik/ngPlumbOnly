@@ -1,0 +1,23 @@
+<form [formGroup]="form">
+  <div class="card">
+    <div class="card-header">
+      <ul class="list-unstyled list-inline mb0">
+        <li class="list-inline-item float-left">
+          <select name="type" class="form-control form-unstlyed w280" formControlName="type">
+            <option *ngFor="let tp of this.availableTypes" value="{{tp}}">{{tp}}</option>
+          </select>
+        </li>
+        <li class="list-inline-item float-right">
+          <button class="btn btn-sm btn-outline-danger" data-action="remove" tabindex="-1" (click)="remove(id)">x</button>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <textarea class="form-control form-unstlyed resizenone" rows="3" placeholder="Description/question" name="description" formControlName="description"></textarea>
+    </div>
+    <div class="card-footer">
+      <app-options *ngFor="let option of this.options" class="option" [optionId]="option.optionId" [widgetId]="id"></app-options>
+      <button data-action="add-connection" class="btn btn-success btn-sm float-right ml10" (click)="addOption(id)">New</button>
+    </div>
+  </div>
+</form>
